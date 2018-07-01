@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--
+    Pierwsza strona ze skryptem - tworzenie zmiennych.
+-->
+<html>
+    <head>
+        <title>Zmienne JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var n = 4;
+            console.log(n);
+            var m = 0.3;
+            var res = n * m;
+            console.log(res);
+
+            var isHappy = false;
+            console.log(isHappy);
+            console.log(!isHappy);
+
+            var isSad = 'true';
+            console.log(isSad);
+            console.log(!isSad);
+
+            var student = {
+                nazwisko: 'Nowak',
+                imie: 'Anna',
+                srednia: 4.51
+            };
+
+            console.log(student);
+            console.log(student.nazwisko);
+
+            student.imie = 'Paweł';
+
+            console.log(student);
+            console.log(student.nazwisko);
+
+            var tab = [];
+            console.log(tab);
+
+            var tab2 = [3, 4, 5, 'Ala ma kota'];
+            console.log(tab2);
+            console.log(tab2[3]);
+            console.log(tab2.length);
+
+            function vat(n) {
+                //debugger;
+                return 0.23 * n;
+            }
+
+            console.log(vat(100) + ' zł');
+
+            var kwota = 100;
+            console.log(kwota + vat(kwota) + ' zł');
+            console.log('' + kwota + vat(kwota) + ' zł');
+
+            kwota = 80;
+            kwota = kwota + 20;
+            kwota += 50;
+            kwota++;
+            ++kwota;
+
+            var czyParzysta = kwota % 2 == 0 ? true : false;
+            console.log(czyParzysta);
+
+            for (var i = 0; i < vat(kwota); i++) {
+                console.log(i);
+            }
+            for (var i = 0, limit = vat(kwota); i < limit; i++) {
+                console.log(i);
+            }
+
+            var status = 1;
+            switch (status) {
+                case 1:
+                    console.log('nie pierwsza');
+                case 3:
+                case 5:
+                case 7:
+                    console.log('nieparzsyta');
+                    break;
+                default:
+                    console.log('inny');
+                    break;
+            }
+
+            var n = 1231849;
+
+            function sumaCyfr(n) {
+                debugger;
+                var suma = 0;
+                while (n) {
+                    suma += n % 10;
+                    n = Math.floor(n / 10);
+                }
+                return suma;
+            }
+            console.log(sumaCyfr(n));
+
+            var obj = {
+                a: 45,
+                get getDoubleA() {
+                    return this.a * 2;
+                },
+                set modifyA(x) {
+                    this.a -= x;
+                },
+                set setA(x) {
+                    this.a = x < 0 ? 0 : x;
+                }
+            };
+
+            obj.setA = 10;
+            console.log("obj.a => " + obj.a);
+            obj.setA = -10;
+            console.log("obj.a => " + obj.a);
+
+            // function scope
+            console.log("*function scope*");
+            function declareVariable() {
+                if (true) {
+                    var y = "Declared in a block of code";
+                }
+                console.log("Value of y: " + y);
+            }
+
+            declareVariable();
+            console.log(y);
+        </script>
+    </body>
+</html>

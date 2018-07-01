@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!--
+    Pierwsza strona - prezentacja tagów HTMLa.
+-->
+<html>
+    <head>
+        <title>Tagi HTML</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            body{
+                font-family: Arial; 
+                background-color: #57e754; 
+                margin: 0px; 
+                border: 0px; 
+                padding: 0px;
+            }
+            h1{
+                color: #18466a;
+            }
+            #nameSpan{font-weight: bold;} 
+        </style>
+    </head>
+    <body>
+        <h1>HTML</h1>
+        <p>Fusce semper arcu arcu, ut mattis leo gravida sit amet. Fusce ornare et sapien at congue. Nam finibus, velit sit amet auctor commodo, nunc tortor aliquet mauris, eu semper erat purus vitae velit. In varius sapien eget lorem condimentum pharetra. Pellentesque euismod, felis ac vehicula efficitur, tortor ante hendrerit odio, eu dignissim turpis turpis sit amet nunc. Fusce placerat massa eu ullamcorper sagittis.</p>
+        <p>Proin mattis dolor mollis metus feugiat, eu eleifend mauris tristique. Aenean rhoncus ornare arcu, in posuere diam dapibus in. Nulla ultrices lacus in libero maximus, sit amet rhoncus felis pharetra. Integer ultricies turpis sit amet interdum suscipit. Morbi ullamcorper quis magna in viverra. Praesent justo nibh, imperdiet id varius quis, mollis id neque. Donec ut tortor efficitur, fermentum eros eget, feugiat ipsum.</p>
+        <h2>HTML</h2>
+        <p>Fusce semper arcu arcu, ut mattis leo gravida sit amet. Fusce ornare et sapien at congue. Nam finibus, velit sit amet auctor commodo, nunc tortor aliquet mauris, eu semper erat purus vitae velit. In varius sapien eget lorem condimentum pharetra. Pellentesque euismod, felis ac vehicula efficitur, tortor ante hendrerit odio, eu dignissim turpis turpis sit amet nunc. Fusce placerat massa eu ullamcorper sagittis.</p>
+        <p>Proin mattis dolor mollis metus feugiat, eu eleifend mauris tristique. Aenean rhoncus ornare arcu, in posuere diam dapibus in. Nulla ultrices lacus in libero maximus, sit amet rhoncus felis pharetra. Integer ultricies turpis sit amet interdum suscipit. Morbi ullamcorper quis magna in viverra. Praesent justo nibh, imperdiet id varius quis, mollis id neque. Donec ut tortor efficitur, fermentum eros eget, feugiat ipsum.</p>
+        <p>Proin mattis                dolor mollis metus 
+            feugiat, eu eleifend mauris 
+
+            tristique. Aenean       rhoncus ornare arcu, in posuere<br>diam dapibus in. Nulla ultrices lacus in libero maximus, sit amet rhoncus felis pharetra. Integer ultricies turpis sit amet interdum suscipit. Morbi ullamcorper quis magna in viverra. Praesent justo nibh, imperdiet id varius quis, mollis id neque. Donec ut tortor efficitur, fermentum eros eget, feugiat ipsum.</p>
+        <h3>Ulubione kolory</h3>
+        <ol>
+            <li>Czarny</li>
+            <li>Czarny</li>
+            <li>Czarny</li>
+            <li>Różowy</li>
+        </ol>
+        <h3>Ulubione kolory</h3>
+        <ul>
+            <li>Czarny</li>
+            <li>Czarny</li>
+            <li>Czarny</li>
+            <li>Różowy</li>
+        </ul>
+        <a href="http://wp.pl">WP.PL</a><br>
+
+        <table border="1">
+            <tr>
+                <td>&nbsp;</td>
+                <td>&lt;</td>
+                <td>&gt;</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+        </table>
+
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>LP.</th>
+                    <th>Nazwisko</th>
+                    <th>Imię</th>
+                    <th>Ocena</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Kowalska-Kwiatkowska</td>
+                    <td>Janina</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <div>TODO write content</div>
+        <span>Tekst</span>
+        <span>Tekst</span>
+        
+        <div id="header"></div>
+        <div id="content"></div>
+        <div id="footer"></div>
+
+        <p>Hi <span id="nameSpan">you</span>!.</p>
+        <script>
+            var nameSpan = document.getElementById("nameSpan");
+            nameSpan.innerHTML = "John";
+        </script>
+    </body>
+</html>

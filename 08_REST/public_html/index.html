@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+    Czytanie zawartości pliku.
+-->
+<html>
+    <head>
+        <title>Wiersz Miłosza - Turka</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="styles/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div>
+            <p class="poem">Ala ma
+                kota
+            </p>
+            <p class="poem" id="version-1"></p>
+        </div>
+        <script>
+            window.addEventListener("load", function () {
+                printPoem1();
+            });
+
+            var printPoem1 = function () {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.open("GET", "dane/tekst.txt", true);// inny zasób
+                
+                xmlhttp.onreadystatechange = function () {
+                    if (xmlhttp.readyState === 4 && xmlhttp.status === 200) {
+                        console.log('Czytaj!!!');
+                        // split po \n
+                    }
+                };
+                xmlhttp.send();
+            };
+        </script>
+    </body>
+</html>
